@@ -36,6 +36,13 @@ ADD https://storage.googleapis.com/kubernetes-release/release/v1.13.5/bin/linux/
 RUN mkdir -p /usr/share/nginx/html/kubernetes-release/release/v1.13.5/bin/linux/amd64
 ADD https://storage.googleapis.com/kubernetes-release/release/v1.13.5/bin/linux/amd64/hyperkube /usr/share/nginx/html/kubernetes-release/release/v1.13.5/bin/linux/amd64/
 
+# v1.13.10
+RUN mkdir -p /kubernetes-release/release/v1.13.10/bin/linux/amd64
+ADD https://storage.googleapis.com/kubernetes-release/release/v1.13.10/bin/linux/amd64/kubeadm /usr/share/nginx/html/kubernetes-release/release/v1.13.10/bin/linux/amd64/
+
+RUN mkdir -p /usr/share/nginx/html/kubernetes-release/release/v1.13.10/bin/linux/amd64
+ADD https://storage.googleapis.com/kubernetes-release/release/v1.13.10/bin/linux/amd64/hyperkube /usr/share/nginx/html/kubernetes-release/release/v1.13.10/bin/linux/amd64/
+
 ## ETCD
 # v3.2.24 for kubernetes <= 1.12
 RUN mkdir -p /usr/share/nginx/html/coreos/etcd/releases/download/v3.2.24
