@@ -43,6 +43,13 @@ ADD https://storage.googleapis.com/kubernetes-release/release/v1.13.10/bin/linux
 RUN mkdir -p /usr/share/nginx/html/kubernetes-release/release/v1.13.10/bin/linux/amd64
 ADD https://storage.googleapis.com/kubernetes-release/release/v1.13.10/bin/linux/amd64/hyperkube /usr/share/nginx/html/kubernetes-release/release/v1.13.10/bin/linux/amd64/
 
+# v1.15.3
+RUN mkdir -p /kubernetes-release/release/v1.15.3/bin/linux/amd64
+ADD https://storage.googleapis.com/kubernetes-release/release/v1.15.3/bin/linux/amd64/kubeadm /usr/share/nginx/html/kubernetes-release/release/v1.15.3/bin/linux/amd64/
+
+RUN mkdir -p /usr/share/nginx/html/kubernetes-release/release/v1.15.3/bin/linux/amd64
+ADD https://storage.googleapis.com/kubernetes-release/release/v1.15.3/bin/linux/amd64/hyperkube /usr/share/nginx/html/kubernetes-release/release/v1.15.3/bin/linux/amd64/
+
 ## ETCD
 # v3.2.24 for kubernetes <= 1.12
 RUN mkdir -p /usr/share/nginx/html/coreos/etcd/releases/download/v3.2.24
@@ -52,10 +59,16 @@ ADD https://github.com/coreos/etcd/releases/download/v3.2.24/etcd-v3.2.24-linux-
 RUN mkdir -p /usr/share/nginx/html/coreos/etcd/releases/download/v3.2.26
 ADD https://github.com/coreos/etcd/releases/download/v3.2.26/etcd-v3.2.26-linux-amd64.tar.gz /usr/share/nginx/html/coreos/etcd/releases/download/v3.2.26/
 
-## CNI-plugin
-# v0.6.0
-RUN mkdir -p /usr/share/nginx/html/containernetworking/plugins/releases/download/v0.6.0
-ADD https://github.com/containernetworking/plugins/releases/download/v0.6.0/cni-plugins-amd64-v0.6.0.tgz /usr/share/nginx/html/containernetworking/plugins/releases/download/v0.6.0/
+# v3.3.10 for kubernetes >= 1.15
+RUN mkdir -p /usr/share/nginx/html/coreos/etcd/releases/download/v3.3.10
+ADD https://github.com/coreos/etcd/releases/download/v3.3.10/etcd-v3.3.10-linux-amd64.tar.gz /usr/share/nginx/html/coreos/etcd/releases/download/v3.3.10/
+
+
+## CNI
+
+# Calicoctl v3.7.3
+RUN mkdir -p /usr/share/nginx/html/projectcalico/calicoctl/releases/download/v3.7.3
+ADD https://github.com/projectcalico/calicoctl/releases/download/v3.7.3/calicoctl-linux-amd64 /usr/share/nginx/html/projectcalico/calicoctl/releases/download/v3.7.3
 
 
 run chmod -R a+r /usr/share/nginx/html/
