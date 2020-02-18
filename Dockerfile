@@ -50,6 +50,14 @@ ADD https://storage.googleapis.com/kubernetes-release/release/v1.15.3/bin/linux/
 RUN mkdir -p /usr/share/nginx/html/kubernetes-release/release/v1.15.3/bin/linux/amd64
 ADD https://storage.googleapis.com/kubernetes-release/release/v1.15.3/bin/linux/amd64/hyperkube /usr/share/nginx/html/kubernetes-release/release/v1.15.3/bin/linux/amd64/
 
+# v1.16.7
+RUN mkdir -p /kubernetes-release/release/v1.16.7/bin/linux/amd64
+ADD https://storage.googleapis.com/kubernetes-release/release/v1.16.7/bin/linux/amd64/kubeadm /usr/share/nginx/html/kubernetes-release/release/v1.16.7/bin/linux/amd64/
+
+RUN mkdir -p /usr/share/nginx/html/kubernetes-release/release/v1.16.7/bin/linux/amd64
+ADD https://storage.googleapis.com/kubernetes-release/release/v1.16.7/bin/linux/amd64/hyperkube /usr/share/nginx/html/kubernetes-release/release/v1.16.7/bin/linux/amd64/
+
+
 ## ETCD
 # v3.2.24 for kubernetes <= 1.12
 RUN mkdir -p /usr/share/nginx/html/coreos/etcd/releases/download/v3.2.24
@@ -70,14 +78,13 @@ ADD https://github.com/coreos/etcd/releases/download/v3.3.10/etcd-v3.3.10-linux-
 RUN mkdir -p /usr/share/nginx/html/projectcalico/calicoctl/releases/download/v3.7.3
 ADD https://github.com/projectcalico/calicoctl/releases/download/v3.7.3/calicoctl-linux-amd64 /usr/share/nginx/html/projectcalico/calicoctl/releases/download/v3.7.3
 
-# v0.6.0
-RUN mkdir -p /usr/share/nginx/html/containernetworking/plugins/releases/download/v0.6.0
-ADD https://github.com/containernetworking/plugins/releases/download/v0.6.0/cni-plugins-amd64-v0.6.0.tgz /usr/share/nginx/html/containernetworking/plugins/releases/download/v0.6.0/
+# Calicoctl v3.11.1
+RUN mkdir -p /usr/share/nginx/html/projectcalico/calicoctl/releases/download/v3.11.1
+ADD https://github.com/projectcalico/calicoctl/releases/download/v3.11.1/calicoctl-linux-amd64 /usr/share/nginx/html/projectcalico/calicoctl/releases/download/v3.11.1
 
 # v0.8.1
 RUN mkdir -p /usr/share/nginx/html/containernetworking/plugins/releases/download/v0.8.1
 ADD https://github.com/containernetworking/plugins/releases/download/v0.8.1/cni-plugins-linux-amd64-v0.8.1.tgz /usr/share/nginx/html/containernetworking/plugins/releases/download/v0.8.1/
-
 
 run chmod -R a+r /usr/share/nginx/html/
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
