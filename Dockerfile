@@ -50,6 +50,13 @@ ADD https://storage.googleapis.com/kubernetes-release/release/v1.15.3/bin/linux/
 RUN mkdir -p /usr/share/nginx/html/kubernetes-release/release/v1.15.3/bin/linux/amd64
 ADD https://storage.googleapis.com/kubernetes-release/release/v1.15.3/bin/linux/amd64/hyperkube /usr/share/nginx/html/kubernetes-release/release/v1.15.3/bin/linux/amd64/
 
+# v1.16.6
+RUN mkdir -p /kubernetes-release/release/v1.16.6/bin/linux/amd64
+ADD https://storage.googleapis.com/kubernetes-release/release/v1.16.6/bin/linux/amd64/kubeadm /usr/share/nginx/html/kubernetes-release/release/v1.16.6/bin/linux/amd64/
+
+RUN mkdir -p /usr/share/nginx/html/kubernetes-release/release/v1.16.6/bin/linux/amd64
+ADD https://storage.googleapis.com/kubernetes-release/release/v1.16.6/bin/linux/amd64/hyperkube /usr/share/nginx/html/kubernetes-release/release/v1.16.6/bin/linux/amd64/
+
 # v1.16.7
 RUN mkdir -p /kubernetes-release/release/v1.16.7/bin/linux/amd64
 ADD https://storage.googleapis.com/kubernetes-release/release/v1.16.7/bin/linux/amd64/kubeadm /usr/share/nginx/html/kubernetes-release/release/v1.16.7/bin/linux/amd64/
