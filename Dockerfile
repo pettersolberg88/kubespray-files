@@ -79,6 +79,28 @@ RUN mkdir -p /usr/share/nginx/html/coreos/etcd/releases/download/v3.3.10
 ADD https://github.com/coreos/etcd/releases/download/v3.3.10/etcd-v3.3.10-linux-amd64.tar.gz /usr/share/nginx/html/coreos/etcd/releases/download/v3.3.10/
 
 
+## Kubelet
+
+# Kubelet v1.16.6
+RUN mkdir -p /usr/share/nginx/html/kubernetes-release/release/v1.16.6/bin/linux/amd64/kubelet
+ADD https://storage.googleapis.com/kubernetes-release/release/v1.16.6/bin/linux/amd64/kubelet /usr/share/nginx/html/kubernetes-release/release/v1.16.6/bin/linux/amd64/kubelet
+
+# Kubelet v1.16.7
+RUN mkdir -p /usr/share/nginx/html/kubernetes-release/release/v1.16.7/bin/linux/amd64/kubelet
+ADD https://storage.googleapis.com/kubernetes-release/release/v1.16.7/bin/linux/amd64/kubelet /usr/share/nginx/html/kubernetes-release/release/v1.16.7/bin/linux/amd64/kubelet
+
+## Kubectl
+
+# Kubctl v1.16.6
+RUN mkdir -p /usr/share/nginx/html/kubernetes-release/release/v1.16.6/bin/linux/amd64/kubectl
+ADD https://storage.googleapis.com/kubernetes-release/release/v1.16.6/bin/linux/amd64/kubectl /usr/share/nginx/html/kubernetes-release/release/v1.16.6/bin/linux/amd64/kubectl
+
+# Kubctl v1.16.7
+RUN mkdir -p /usr/share/nginx/html/kubernetes-release/release/v1.16.7/bin/linux/amd64/kubectl
+ADD https://storage.googleapis.com/kubernetes-release/release/v1.16.7/bin/linux/amd64/kubectl /usr/share/nginx/html/kubernetes-release/release/v1.16.7/bin/linux/amd64/kubectl
+
+
+
 ## CNI
 
 # Calicoctl v3.7.3
