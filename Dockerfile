@@ -8,40 +8,6 @@ RUN apk add nginx
 COPY default.conf /etc/nginx/conf.d/default.conf
 
 ## Kubernetes
-# v1.10.12
-RUN mkdir -p /kubernetes-release/release/v1.10.12/bin/linux/amd64
-ADD https://storage.googleapis.com/kubernetes-release/release/v1.10.12/bin/linux/amd64/kubeadm /usr/share/nginx/html/kubernetes-release/release/v1.10.12/bin/linux/amd64/
-
-RUN mkdir -p /usr/share/nginx/html/kubernetes-release/release/v1.10.12/bin/linux/amd64
-ADD https://storage.googleapis.com/kubernetes-release/release/v1.10.12/bin/linux/amd64/hyperkube /usr/share/nginx/html/kubernetes-release/release/v1.10.12/bin/linux/amd64/
-
-# v1.11.6
-RUN mkdir -p /kubernetes-release/release/v1.11.6/bin/linux/amd64
-ADD https://storage.googleapis.com/kubernetes-release/release/v1.11.6/bin/linux/amd64/kubeadm /usr/share/nginx/html/kubernetes-release/release/v1.11.6/bin/linux/amd64/
-
-RUN mkdir -p /usr/share/nginx/html/kubernetes-release/release/v1.11.6/bin/linux/amd64
-ADD https://storage.googleapis.com/kubernetes-release/release/v1.11.6/bin/linux/amd64/hyperkube /usr/share/nginx/html/kubernetes-release/release/v1.11.6/bin/linux/amd64/
-
-# v1.12.4
-RUN mkdir -p /kubernetes-release/release/v1.12.4/bin/linux/amd64
-ADD https://storage.googleapis.com/kubernetes-release/release/v1.12.4/bin/linux/amd64/kubeadm /usr/share/nginx/html/kubernetes-release/release/v1.12.4/bin/linux/amd64/
-
-RUN mkdir -p /usr/share/nginx/html/kubernetes-release/release/v1.12.4/bin/linux/amd64
-ADD https://storage.googleapis.com/kubernetes-release/release/v1.12.4/bin/linux/amd64/hyperkube /usr/share/nginx/html/kubernetes-release/release/v1.12.4/bin/linux/amd64/
-
-# v1.13.5
-RUN mkdir -p /kubernetes-release/release/v1.13.5/bin/linux/amd64
-ADD https://storage.googleapis.com/kubernetes-release/release/v1.13.5/bin/linux/amd64/kubeadm /usr/share/nginx/html/kubernetes-release/release/v1.13.5/bin/linux/amd64/
-
-RUN mkdir -p /usr/share/nginx/html/kubernetes-release/release/v1.13.5/bin/linux/amd64
-ADD https://storage.googleapis.com/kubernetes-release/release/v1.13.5/bin/linux/amd64/hyperkube /usr/share/nginx/html/kubernetes-release/release/v1.13.5/bin/linux/amd64/
-
-# v1.13.10
-RUN mkdir -p /kubernetes-release/release/v1.13.10/bin/linux/amd64
-ADD https://storage.googleapis.com/kubernetes-release/release/v1.13.10/bin/linux/amd64/kubeadm /usr/share/nginx/html/kubernetes-release/release/v1.13.10/bin/linux/amd64/
-
-RUN mkdir -p /usr/share/nginx/html/kubernetes-release/release/v1.13.10/bin/linux/amd64
-ADD https://storage.googleapis.com/kubernetes-release/release/v1.13.10/bin/linux/amd64/hyperkube /usr/share/nginx/html/kubernetes-release/release/v1.13.10/bin/linux/amd64/
 
 # v1.15.3
 RUN mkdir -p /kubernetes-release/release/v1.15.3/bin/linux/amd64
@@ -64,19 +30,13 @@ ADD https://storage.googleapis.com/kubernetes-release/release/v1.16.7/bin/linux/
 RUN mkdir -p /usr/share/nginx/html/kubernetes-release/release/v1.16.7/bin/linux/amd64
 ADD https://storage.googleapis.com/kubernetes-release/release/v1.16.7/bin/linux/amd64/hyperkube /usr/share/nginx/html/kubernetes-release/release/v1.16.7/bin/linux/amd64/
 
+# v1.16.9
+RUN mkdir -p /kubernetes-release/release/v1.16.9/bin/linux/amd64
+ADD https://storage.googleapis.com/kubernetes-release/release/v1.16.9/bin/linux/amd64/kubeadm /usr/share/nginx/html/kubernetes-release/release/v1.16.9/bin/linux/amd64/
 
-## ETCD
-# v3.2.24 for kubernetes <= 1.12
-RUN mkdir -p /usr/share/nginx/html/coreos/etcd/releases/download/v3.2.24
-ADD https://github.com/coreos/etcd/releases/download/v3.2.24/etcd-v3.2.24-linux-amd64.tar.gz /usr/share/nginx/html/coreos/etcd/releases/download/v3.2.24/
-
-# v3.2.26 for kubernetes >= 1.13
-RUN mkdir -p /usr/share/nginx/html/coreos/etcd/releases/download/v3.2.26
-ADD https://github.com/coreos/etcd/releases/download/v3.2.26/etcd-v3.2.26-linux-amd64.tar.gz /usr/share/nginx/html/coreos/etcd/releases/download/v3.2.26/
-
-# v3.3.10 for kubernetes >= 1.15
-RUN mkdir -p /usr/share/nginx/html/coreos/etcd/releases/download/v3.3.10
-ADD https://github.com/coreos/etcd/releases/download/v3.3.10/etcd-v3.3.10-linux-amd64.tar.gz /usr/share/nginx/html/coreos/etcd/releases/download/v3.3.10/
+# v1.17.5
+RUN mkdir -p /kubernetes-release/release/v1.17.5/bin/linux/amd64
+ADD https://storage.googleapis.com/kubernetes-release/release/v1.17.5/bin/linux/amd64/kubeadm /usr/share/nginx/html/kubernetes-release/release/v1.17.5/bin/linux/amd64/
 
 
 ## Kubelet
@@ -89,6 +49,15 @@ ADD https://storage.googleapis.com/kubernetes-release/release/v1.16.6/bin/linux/
 RUN mkdir -p /usr/share/nginx/html/kubernetes-release/release/v1.16.7/bin/linux/amd64/kubelet
 ADD https://storage.googleapis.com/kubernetes-release/release/v1.16.7/bin/linux/amd64/kubelet /usr/share/nginx/html/kubernetes-release/release/v1.16.7/bin/linux/amd64/
 
+# Kubelet v1.16.9
+RUN mkdir -p /usr/share/nginx/html/kubernetes-release/release/v1.16.9/bin/linux/amd64/kubelet
+ADD https://storage.googleapis.com/kubernetes-release/release/v1.16.9/bin/linux/amd64/kubelet /usr/share/nginx/html/kubernetes-release/release/v1.16.9/bin/linux/amd64/
+
+# Kubelet v1.17.5
+RUN mkdir -p /usr/share/nginx/html/kubernetes-release/release/v1.17.5/bin/linux/amd64/kubelet
+ADD https://storage.googleapis.com/kubernetes-release/release/v1.17.5/bin/linux/amd64/kubelet /usr/share/nginx/html/kubernetes-release/release/v1.17.5/bin/linux/amd64/
+
+
 ## Kubectl
 
 # Kubctl v1.16.6
@@ -99,7 +68,23 @@ ADD https://storage.googleapis.com/kubernetes-release/release/v1.16.6/bin/linux/
 RUN mkdir -p /usr/share/nginx/html/kubernetes-release/release/v1.16.7/bin/linux/amd64/kubectl
 ADD https://storage.googleapis.com/kubernetes-release/release/v1.16.7/bin/linux/amd64/kubectl /usr/share/nginx/html/kubernetes-release/release/v1.16.7/bin/linux/amd64/
 
+# Kubctl v1.16.9
+RUN mkdir -p /usr/share/nginx/html/kubernetes-release/release/v1.16.9/bin/linux/amd64/kubectl
+ADD https://storage.googleapis.com/kubernetes-release/release/v1.16.9/bin/linux/amd64/kubectl /usr/share/nginx/html/kubernetes-release/release/v1.16.9/bin/linux/amd64/
 
+# Kubctl v1.17.5
+RUN mkdir -p /usr/share/nginx/html/kubernetes-release/release/v1.17.5/bin/linux/amd64/kubectl
+ADD https://storage.googleapis.com/kubernetes-release/release/v1.17.5/bin/linux/amd64/kubectl /usr/share/nginx/html/kubernetes-release/release/v1.17.5/bin/linux/amd64/
+
+
+## ETCD
+# v3.3.10 for kubernetes >= 1.15
+RUN mkdir -p /usr/share/nginx/html/coreos/etcd/releases/download/v3.3.10
+ADD https://github.com/coreos/etcd/releases/download/v3.3.10/etcd-v3.3.10-linux-amd64.tar.gz /usr/share/nginx/html/coreos/etcd/releases/download/v3.3.10/
+
+# v3.3.12 for kubernetes >= 1.17.5
+RUN mkdir -p /usr/share/nginx/html/coreos/etcd/releases/download/v3.3.12
+ADD https://github.com/coreos/etcd/releases/download/v3.3.12/etcd-v3.3.12-linux-amd64.tar.gz /usr/share/nginx/html/coreos/etcd/releases/download/v3.3.12/
 
 ## CNI
 
@@ -111,9 +96,17 @@ ADD https://github.com/projectcalico/calicoctl/releases/download/v3.7.3/calicoct
 RUN mkdir -p /usr/share/nginx/html/projectcalico/calicoctl/releases/download/v3.11.1
 ADD https://github.com/projectcalico/calicoctl/releases/download/v3.11.1/calicoctl-linux-amd64 /usr/share/nginx/html/projectcalico/calicoctl/releases/download/v3.11.1
 
+# Calicoctl v3.13.2
+RUN mkdir -p /usr/share/nginx/html/projectcalico/calicoctl/releases/download/v3.13.2
+ADD https://github.com/projectcalico/calicoctl/releases/download/v3.13.2/calicoctl-linux-amd64 /usr/share/nginx/html/projectcalico/calicoctl/releases/download/v3.13.2
+
+
 # v0.8.1
 RUN mkdir -p /usr/share/nginx/html/containernetworking/plugins/releases/download/v0.8.1
 ADD https://github.com/containernetworking/plugins/releases/download/v0.8.1/cni-plugins-linux-amd64-v0.8.1.tgz /usr/share/nginx/html/containernetworking/plugins/releases/download/v0.8.1/
+
+RUN mkdir -p /usr/share/nginx/html/containernetworking/plugins/releases/download/v0.8.5
+ADD https://github.com/containernetworking/plugins/releases/download/v0.8.5/cni-plugins-linux-amd64-v0.8.5.tgz /usr/share/nginx/html/containernetworking/plugins/releases/download/v0.8.5/
 
 run chmod -R a+r /usr/share/nginx/html/
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
